@@ -1,17 +1,687 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <p class="hero-pre">Where Sound Meets Ceremony</p>
+      <h1>Verse & Vow</h1>
+      <p class="hero-tagline">Event Agency</p>
+      <div class="hero-ornament"></div>
+      <p class="hero-sub">
+        Professional entertainment, photography, and event services for
+        celebrations that deserve to be heard, seen, and remembered.
+        From intimate ceremonies to grand receptions — we bring the artistry.
+      </p>
+      <div class="hero-cta">
+        <a href="/contact" class="btn btn-primary">Start Planning</a>
+        <a href="/services" class="btn btn-white">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTRO ===== -->
+  <section class="section intro">
+    <div class="container text-center">
+      <div class="section-header">
+        <h2>One Team. Seamless Celebrations.</h2>
+        <span class="ornament"></span>
+        <p>
+          Founded by a Recording Arts professor with decades of live sound
+          and studio experience, Verse & Vow brings professional-grade
+          entertainment and media services to your most important moments.
+        </p>
+      </div>
+
+      <div class="intro-stats">
+        <div class="stat">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Years of Experience</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">1</span>
+          <span class="stat-label">Seamless Team</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">∞</span>
+          <span class="stat-label">Creative Possibilities</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ===== KEY DIFFERENTIATOR ===== -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="differentiator-grid">
+        <div class="diff-content">
+          <p class="diff-pre">The Verse & Vow Difference</p>
+          <h2>Acoustic Ceremony. DJ Reception.<br/>One Artist. Zero Gaps.</h2>
+          <span class="ornament"></span>
+          <p>
+            Most couples hire separate musicians for the ceremony and a DJ
+            for the reception. That means coordinating schedules, managing
+            handoffs, and hoping the energy translates.
+          </p>
+          <p>
+            <strong>We do both.</strong> The same artist who plays your
+            acoustic ceremony transitions seamlessly into DJ duties for
+            your reception. No gaps. No miscommunication. Just one person
+            who understands your day from first note to last dance.
+          </p>
+          <p class="diff-highlight">
+            This is what happens when a Recording Arts professor builds
+            an event company.
+          </p>
+        </div>
+        <div class="diff-visual">
+          <div class="diff-card">
+            <span class="diff-icon">🎸</span>
+            <h3>Ceremony</h3>
+            <p>Live acoustic performance — guitar, vocals, or instrumental arrangements tailored to your processional, readings, and recessional.</p>
+          </div>
+          <div class="diff-card">
+            <span class="diff-icon">🎧</span>
+            <h3>Reception</h3>
+            <p>Professional DJ services with curated playlists, seamless mixing, and the energy to keep your guests on the dance floor all night.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES OVERVIEW ===== -->
+  <section class="section section-cream" id="services-preview">
+    <div class="container">
+      <div class="section-header">
+        <h2>What We Do</h2>
+        <span class="ornament"></span>
+        <p>Entertainment. Media. Events. All under one roof.</p>
+      </div>
+
+      <div class="grid-3 services-grid">
+        <div class="card featured">
+          <span class="card-icon">🎵</span>
+          <h3>Live Music & DJ</h3>
+          <p>
+            Acoustic ceremony sets and professional DJ services — performed
+            by the same artist. Guitar, vocals, curated playlists, and
+            seamless transitions from "I do" to the dance floor.
+          </p>
+        </div>
+
+        <div class="card featured">
+          <span class="card-icon">📸</span>
+          <h3>Photography & Videography</h3>
+          <p>
+            Cinematic wedding films, stunning photography, and creative
+            content that captures the emotion and energy of your celebration.
+            Drone coverage, same-day edits, and premium albums.
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="card-icon">🎬</span>
+          <h3>Audio Production</h3>
+          <p>
+            Studio-quality sound for your event. Professional microphones,
+            mixing, and sound design from someone who actually understands
+            acoustics and audio engineering.
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="card-icon">📋</span>
+          <h3>Event Planning</h3>
+          <p>
+            Full-service coordination for weddings and celebrations across
+            cultures. We understand traditions, manage vendors, and ensure
+            every detail is handled with care.
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="card-icon">🍽️</span>
+          <h3>Catering Coordination</h3>
+          <p>
+            Connections to trusted caterers for any cuisine and dietary
+            requirement. We coordinate the logistics so you can focus on
+            enjoying the food.
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="card-icon">✨</span>
+          <h3>Decor & Lighting</h3>
+          <p>
+            Ambient lighting design, stage setup, and venue transformation
+            that sets the mood and photographs beautifully.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 3rem;">
+        <a href="/services" class="btn btn-outline">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PHOTO/VIDEO HIGHLIGHT ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="media-grid">
+        <div class="media-content">
+          <p class="media-pre">Photography & Videography</p>
+          <h2>Your Story, Beautifully Told</h2>
+          <span class="ornament"></span>
+          <p>
+            We don't just document your event — we craft a visual narrative.
+            From candid moments to cinematic highlight reels, our photo and
+            video work captures the energy, emotion, and artistry of your
+            celebration.
+          </p>
+          <ul class="media-features">
+            <li>Cinematic wedding films with professional editing</li>
+            <li>Drone coverage for breathtaking aerial perspectives</li>
+            <li>Same-day highlight edits for reception screenings</li>
+            <li>Multi-photographer coverage for simultaneous moments</li>
+            <li>Premium albums and digital galleries</li>
+            <li>Creative direction that makes every shot count</li>
+          </ul>
+          <a href="/services#photo-video" class="btn btn-outline">Learn More</a>
+        </div>
+        <div class="media-visual placeholder-block">
+          <span>Photo & Video Portfolio</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Verse & Vow?</h2>
+        <span class="ornament"></span>
+        <p>Professional expertise meets personal care.</p>
+      </div>
+
+      <div class="grid-2 why-grid">
+        <div class="why-item">
+          <h3>Academic Excellence, Real-World Results</h3>
+          <p>
+            Founded by a professor of Recording Arts & Technology, we bring
+            the precision of the studio and the knowledge of the classroom
+            to every event. This isn't a side hustle — it's a craft.
+          </p>
+        </div>
+
+        <div class="why-item">
+          <h3>One Team, No Coordination Headaches</h3>
+          <p>
+            When your music, photo, video, and event coordination come from
+            one team, everything just works. No miscommunication between
+            vendors. No style mismatches. Just seamless execution.
+          </p>
+        </div>
+
+        <div class="why-item">
+          <h3>Cultural Fluency</h3>
+          <p>
+            We've worked with celebrations across traditions — Hindu,
+            Christian, Jewish, Muslim, secular, and fusion. We understand
+            that every ceremony has its own rhythm and significance.
+          </p>
+        </div>
+
+        <div class="why-item">
+          <h3>Studio-Quality Sound</h3>
+          <p>
+            Most event vendors treat audio as an afterthought. We treat it
+            as the foundation. Crystal-clear ceremony audio, perfectly
+            balanced reception sound, and mixes that actually sound good.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CELEBRATION TYPES ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Celebrations We Serve</h2>
+        <span class="ornament"></span>
+        <p>Every tradition, every style, every story.</p>
+      </div>
+
+      <div class="grid-4 ceremony-grid">
+        <div class="ceremony-card">
+          <div class="ceremony-img placeholder-img">
+            <span>Wedding</span>
+          </div>
+          <h3>Weddings</h3>
+          <p>Full-service entertainment and media for your big day</p>
+        </div>
+        <div class="ceremony-card">
+          <div class="ceremony-img placeholder-img">
+            <span>Reception</span>
+          </div>
+          <h3>Receptions</h3>
+          <p>DJ services, lighting, and party energy that lasts</p>
+        </div>
+        <div class="ceremony-card">
+          <div class="ceremony-img placeholder-img">
+            <span>Corporate</span>
+          </div>
+          <h3>Corporate Events</h3>
+          <p>Professional AV and entertainment for business gatherings</p>
+        </div>
+        <div class="ceremony-card">
+          <div class="ceremony-img placeholder-img">
+            <span>Private</span>
+          </div>
+          <h3>Private Celebrations</h3>
+          <p>Birthdays, anniversaries, and milestone moments</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ===== CTA ===== -->
+  <section class="section section-dark cta-section">
+    <div class="container text-center">
+      <h2>Let's Create Something Beautiful</h2>
+      <span class="ornament" style="margin: 1rem auto;"></span>
+      <p style="max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.15rem; opacity: 0.9;">
+        Every great celebration starts with a conversation. Tell us about
+        your vision, and we'll show you how to bring it to life.
+      </p>
+      <a href="/contact" class="btn btn-primary">Schedule a Free Consultation</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* ===== HERO ===== */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+      linear-gradient(160deg, rgba(26, 32, 44, 0.95), rgba(45, 55, 72, 0.88));
+    color: var(--cream);
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 80%, rgba(201, 168, 76, 0.08), transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(201, 168, 76, 0.06), transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    animation: fadeInUp 1s ease-out;
+  }
+
+  .hero-pre {
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 {
+    color: var(--white);
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    line-height: 1.05;
+  }
+
+  .hero-tagline {
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .hero-ornament {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 1.5rem auto;
+  }
+
+  .hero-sub {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 580px;
+    margin: 0 auto 2.5rem;
+    opacity: 0.9;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ===== INTRO STATS ===== */
+  .intro-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-number {
+    font-family: var(--font-display);
+    font-size: 2.75rem;
+    font-weight: 600;
+    color: var(--gold-dark);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--charcoal-light);
+    margin-top: 0.5rem;
+  }
+
+  /* ===== DIFFERENTIATOR ===== */
+  .differentiator-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .diff-pre {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .diff-content h2 {
+    color: var(--gold-light);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .diff-content .ornament {
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: var(--gold);
+    margin: 1.5rem 0;
+  }
+
+  .diff-content p {
+    margin-bottom: 1.25rem;
+    opacity: 0.9;
+    line-height: 1.7;
+  }
+
+  .diff-content strong {
+    color: var(--gold-light);
+  }
+
+  .diff-highlight {
+    font-style: italic;
+    color: var(--gold-light) !important;
+    opacity: 1 !important;
+  }
+
+  .diff-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .diff-card {
+    background: rgba(201, 168, 76, 0.1);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .diff-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .diff-card h3 {
+    color: var(--gold);
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .diff-card p {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin: 0;
+  }
+
+  /* ===== FEATURED CARDS ===== */
+  .card.featured {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, var(--white), var(--cream-dark));
+  }
+
+  /* ===== MEDIA SECTION ===== */
+  .media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .media-pre {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-bottom: 1rem;
+  }
+
+  .media-content h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .media-content .ornament {
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: var(--gold);
+    margin: 1rem 0 1.5rem;
+  }
+
+  .media-content p {
+    margin-bottom: 1.5rem;
+    color: var(--charcoal-light);
+    line-height: 1.7;
+  }
+
+  .media-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .media-features li {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--charcoal-light);
+  }
+
+  .media-features li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.7rem;
+    top: 0.3rem;
+  }
+
+  .media-visual {
+    height: 450px;
+  }
+
+  .placeholder-block {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--slate-deep), var(--slate));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(201, 168, 76, 0.2);
+  }
+
+  .placeholder-block span {
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    opacity: 0.5;
+  }
+
+  /* ===== WHY CHOOSE US ===== */
+  .why-grid {
+    gap: 2.5rem;
+  }
+
+  .why-item {
+    padding: 2rem;
+    border-left: 3px solid var(--gold);
+  }
+
+  .why-item h3 {
+    color: var(--gold-light);
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .why-item p {
+    opacity: 0.85;
+    line-height: 1.7;
+  }
+
+  /* ===== CEREMONY CARDS ===== */
+  .ceremony-card {
+    text-align: center;
+    transition: transform var(--transition-smooth);
+  }
+
+  .ceremony-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .ceremony-img {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 1.25rem;
+    border: 2px solid rgba(201, 168, 76, 0.2);
+  }
+
+  .placeholder-img {
+    background: linear-gradient(135deg, var(--slate-deep), var(--slate));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .placeholder-img span {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    opacity: 0.6;
+  }
+
+  .ceremony-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .ceremony-card p {
+    font-size: 0.95rem;
+    color: var(--charcoal-light);
+    margin: 0 auto;
+  }
+
+  /* ===== CTA SECTION ===== */
+  .cta-section h2 {
+    color: var(--gold-light);
+  }
+
+  @media (max-width: 768px) {
+    .intro-stats {
+      gap: 2rem;
+    }
+
+    .hero-cta {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .differentiator-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .media-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .media-visual {
+      height: 300px;
+    }
+  }
+</style>

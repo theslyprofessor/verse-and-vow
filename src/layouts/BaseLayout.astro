@@ -1,0 +1,364 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Verse & Vow | Event Agency',
+  description = 'Full-service event agency specializing in wedding entertainment, live music, DJ services, photography, and videography. Where sound meets ceremony.',
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <!-- ===== NAVIGATION ===== -->
+    <header class="site-header" id="site-header">
+      <nav class="nav container">
+        <a href="/" class="nav-brand">
+          <span class="brand-name">Verse & Vow</span>
+          <span class="brand-tagline">Event Agency</span>
+        </a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="/" class:list={[{ active: currentPath === '/' }]}>Home</a></li>
+          <li><a href="/services" class:list={[{ active: currentPath === '/services' }]}>Services</a></li>
+          <li><a href="/about" class:list={[{ active: currentPath === '/about' }]}>About</a></li>
+          <li><a href="/contact" class="btn btn-primary nav-cta">Start Planning</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <h3>Verse & Vow</h3>
+              <p class="footer-tagline">Event Agency</p>
+              <p>Where sound meets ceremony. Professional entertainment, photography, and event services for celebrations that deserve to be remembered.</p>
+            </div>
+
+            <div class="footer-links">
+              <h4>Navigate</h4>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-links">
+              <h4>Services</h4>
+              <ul>
+                <li><a href="/services#music">Live Music & DJ</a></li>
+                <li><a href="/services#photo-video">Photo & Video</a></li>
+                <li><a href="/services#planning">Event Planning</a></li>
+                <li><a href="/services#catering">Catering</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-contact">
+              <h4>Get in Touch</h4>
+              <p>Serving celebrations worldwide</p>
+              <p>Based in Southern California</p>
+              <a href="/contact" class="btn btn-outline" style="margin-top: 1rem;">Free Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; {new Date().getFullYear()} Verse & Vow. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+      // Mobile nav toggle
+      const toggle = document.getElementById('nav-toggle');
+      const links = document.getElementById('nav-links');
+      if (toggle && links) {
+        toggle.addEventListener('click', () => {
+          links.classList.toggle('open');
+          toggle.classList.toggle('open');
+        });
+      }
+
+      // Header scroll effect
+      const header = document.getElementById('site-header');
+      if (header) {
+        window.addEventListener('scroll', () => {
+          header.classList.toggle('scrolled', window.scrollY > 60);
+        });
+      }
+    </script>
+
+    <style>
+      /* ===== HEADER / NAV ===== */
+      .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 1.25rem 0;
+        transition: all 0.4s ease;
+        background: transparent;
+      }
+
+      .site-header.scrolled {
+        background: rgba(26, 32, 44, 0.97);
+        padding: 0.75rem 0;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-brand {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .brand-name {
+        font-family: var(--font-display);
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: var(--gold);
+        letter-spacing: 0.02em;
+      }
+
+      .brand-tagline {
+        font-family: var(--font-ui);
+        font-size: 0.65rem;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--gold-light);
+        opacity: 0.8;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+      }
+
+      .nav-links a {
+        font-family: var(--font-ui);
+        font-size: 0.8rem;
+        font-weight: 400;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--cream);
+        transition: color var(--transition-smooth);
+        position: relative;
+      }
+
+      .nav-links a:not(.nav-cta)::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 1.5px;
+        background: var(--gold);
+        transition: width var(--transition-smooth);
+      }
+
+      .nav-links a:hover::after,
+      .nav-links a.active::after {
+        width: 100%;
+      }
+
+      .nav-links a:hover {
+        color: var(--gold);
+      }
+
+      .nav-cta {
+        padding: 0.65rem 1.5rem !important;
+        font-size: 0.75rem !important;
+      }
+
+      /* Mobile toggle */
+      .nav-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+      }
+
+      .nav-toggle span {
+        width: 26px;
+        height: 2px;
+        background: var(--gold);
+        transition: all 0.3s ease;
+      }
+
+      .nav-toggle.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .nav-toggle.open span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .nav-toggle.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+
+      @media (max-width: 768px) {
+        .nav-toggle {
+          display: flex;
+        }
+
+        .nav-links {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 75%;
+          max-width: 320px;
+          height: 100vh;
+          flex-direction: column;
+          justify-content: center;
+          gap: 2rem;
+          background: var(--slate-deep);
+          transition: right 0.4s ease;
+          box-shadow: -4px 0 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-links.open {
+          right: 0;
+        }
+      }
+
+      /* ===== FOOTER ===== */
+      .site-footer {
+        background: var(--slate-deep);
+        color: var(--cream);
+      }
+
+      .footer-top {
+        padding: 5rem 0 3rem;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        gap: 3rem;
+      }
+
+      .footer-brand h3 {
+        font-family: var(--font-display);
+        color: var(--gold);
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .footer-tagline {
+        font-family: var(--font-ui);
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--gold-light);
+        opacity: 0.7;
+        margin-bottom: 1rem;
+      }
+
+      .footer-brand p {
+        font-size: 0.95rem;
+        opacity: 0.8;
+        line-height: 1.6;
+      }
+
+      .footer-links h4,
+      .footer-contact h4 {
+        font-family: var(--font-ui);
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 1.25rem;
+      }
+
+      .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+
+      .footer-links a {
+        font-size: 0.95rem;
+        opacity: 0.7;
+        transition: opacity var(--transition-smooth);
+      }
+
+      .footer-links a:hover {
+        opacity: 1;
+        color: var(--gold-light);
+      }
+
+      .footer-contact p {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        line-height: 1.5;
+      }
+
+      .footer-bottom {
+        padding: 1.5rem 0;
+        text-align: center;
+      }
+
+      .footer-bottom p {
+        font-family: var(--font-ui);
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        opacity: 0.5;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 768px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+          text-align: center;
+        }
+      }
+    </style>
+  </body>
+</html>

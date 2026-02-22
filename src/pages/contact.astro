@@ -1,0 +1,435 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact | Verse & Vow" description="Schedule a free consultation with Verse & Vow. Tell us about your celebration and let us create a custom entertainment and media package for your event.">
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container text-center">
+      <p class="page-hero-pre">Contact Us</p>
+      <h1>Let's Create Together</h1>
+      <p class="page-hero-sub">
+        Every great celebration starts with a conversation. Tell us about
+        your vision, and we'll show you what's possible.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT FORM ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-form-wrapper">
+          <h2>Schedule a Free Consultation</h2>
+          <span class="ornament"></span>
+          <p class="form-intro">
+            Fill out the form below and we'll reach out within 24 hours
+            to discuss your celebration.
+          </p>
+
+          <form class="contact-form" name="event-inquiry" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" name="first-name" required />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name *</label>
+                <input type="text" id="last-name" name="last-name" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="event-date">Event Date</label>
+              <input type="date" id="event-date" name="event-date" />
+            </div>
+
+            <div class="form-group">
+              <label for="event-type">Event Type</label>
+              <select id="event-type" name="event-type">
+                <option value="">Select your event type...</option>
+                <option value="wedding">Wedding</option>
+                <option value="reception">Reception Only</option>
+                <option value="engagement">Engagement Party</option>
+                <option value="corporate">Corporate Event</option>
+                <option value="private">Private Celebration</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="guest-count">Estimated Guest Count</label>
+              <select id="guest-count" name="guest-count">
+                <option value="">Select approximate number...</option>
+                <option value="under-50">Under 50</option>
+                <option value="50-100">50 - 100</option>
+                <option value="100-200">100 - 200</option>
+                <option value="200-plus">200+</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="services">Services You're Interested In</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="services" value="music-dj" />
+                  <span>Live Music & DJ</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="services" value="photography" />
+                  <span>Photography</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="services" value="videography" />
+                  <span>Videography</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="services" value="audio" />
+                  <span>Audio Production</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="services" value="planning" />
+                  <span>Event Planning</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="services" value="lighting" />
+                  <span>Lighting Design</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="services" value="catering" />
+                  <span>Catering Coordination</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="services" value="full-service" />
+                  <span>Full Media Package</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell Us About Your Vision</label>
+              <textarea id="message" name="message" rows="5" placeholder="Share any details about your event, style preferences, cultural traditions, or anything else you'd like us to know..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Inquiry</button>
+          </form>
+        </div>
+
+        <div class="contact-sidebar">
+          <div class="sidebar-card">
+            <h3>What to Expect</h3>
+            <ol class="expect-list">
+              <li>
+                <strong>Submit your inquiry</strong>
+                <p>Share the basics about your celebration.</p>
+              </li>
+              <li>
+                <strong>Free consultation</strong>
+                <p>We'll call to discuss your vision and needs.</p>
+              </li>
+              <li>
+                <strong>Custom proposal</strong>
+                <p>Receive a tailored package with services and pricing.</p>
+              </li>
+              <li>
+                <strong>Let's create</strong>
+                <p>Once you're ready, we handle everything from there.</p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Service Area</h3>
+            <p>Based in Southern California, available for travel:</p>
+            <ul class="area-list">
+              <li>Los Angeles</li>
+              <li>Orange County</li>
+              <li>San Diego</li>
+              <li>Inland Empire</li>
+              <li>Destination events nationwide</li>
+              <li>International celebrations</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card dark">
+            <h3>Prefer to Call?</h3>
+            <p>
+              We'd love to hear from you directly. Reach out and let's
+              start planning your celebration.
+            </p>
+            <p class="email-address">hello@verseandvow.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* ===== PAGE HERO ===== */
+  .page-hero {
+    padding: clamp(8rem, 15vw, 12rem) 0 clamp(4rem, 8vw, 6rem);
+    background: linear-gradient(160deg, var(--slate-deep), var(--slate));
+    color: var(--cream);
+  }
+
+  .page-hero-pre {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .page-hero h1 {
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .page-hero-sub {
+    font-size: 1.15rem;
+    max-width: 550px;
+    margin: 0 auto;
+    opacity: 0.9;
+  }
+
+  /* ===== CONTACT GRID ===== */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  /* ===== FORM WRAPPER ===== */
+  .contact-form-wrapper h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-form-wrapper .ornament {
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: var(--gold);
+    margin: 1rem 0;
+  }
+
+  .form-intro {
+    color: var(--charcoal-light);
+    margin-bottom: 2rem;
+  }
+
+  /* ===== FORM STYLES ===== */
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    border: 1.5px solid rgba(201, 168, 76, 0.25);
+    background: var(--white);
+    color: var(--charcoal);
+    transition: border-color var(--transition-smooth);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  /* Checkbox group */
+  .checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    font-weight: 400 !important;
+    color: var(--charcoal-light);
+  }
+
+  .checkbox-label input[type="checkbox"] {
+    width: auto;
+    accent-color: var(--gold);
+  }
+
+  .contact-form .btn {
+    margin-top: 0.5rem;
+  }
+
+  /* ===== SIDEBAR ===== */
+  .sidebar-card {
+    padding: 2rem;
+    background: var(--white);
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    margin-bottom: 1.5rem;
+  }
+
+  .sidebar-card.dark {
+    background: var(--slate-deep);
+    color: var(--cream);
+    border: none;
+  }
+
+  .sidebar-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+  }
+
+  .sidebar-card.dark h3 {
+    color: var(--gold-light);
+  }
+
+  .sidebar-card p {
+    font-size: 0.95rem;
+    color: var(--charcoal-light);
+    line-height: 1.6;
+  }
+
+  .sidebar-card.dark p {
+    color: var(--cream);
+    opacity: 0.85;
+  }
+
+  /* Expect list */
+  .expect-list {
+    counter-reset: expect;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .expect-list li {
+    counter-increment: expect;
+    position: relative;
+    padding-left: 2.5rem;
+  }
+
+  .expect-list li::before {
+    content: counter(expect);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.75rem;
+    height: 1.75rem;
+    background: var(--gold);
+    color: var(--slate-deep);
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .expect-list strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--slate-deep);
+  }
+
+  .expect-list p {
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+  }
+
+  /* Area list */
+  .area-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+  }
+
+  .area-list li {
+    font-size: 0.9rem;
+    color: var(--charcoal-light);
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .area-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.6rem;
+    top: 0.35rem;
+  }
+
+  /* Contact info */
+  .email-address {
+    font-family: var(--font-display);
+    font-size: 1.25rem !important;
+    color: var(--gold) !important;
+    opacity: 1 !important;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .checkbox-group {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
