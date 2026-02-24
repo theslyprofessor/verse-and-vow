@@ -56,13 +56,13 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 18px; /* Increased from 16px for better readability */
 }
 
 body {
   font-family: var(--font-body);
-  font-size: 1.125rem;
-  line-height: 1.7;
+  font-size: 1.25rem; /* Increased from 1.125rem */
+  line-height: 1.75;
   color: var(--charcoal);
   background-color: var(--cream);
   -webkit-font-smoothing: antialiased;
@@ -93,15 +93,15 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(3rem, 6vw, 5rem); /* Larger headlines */
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.25rem, 5vw, 3.5rem); /* More prominent section titles */
 }
 
 h3 {
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-size: clamp(1.5rem, 3vw, 2rem); /* Bigger subheadings */
 }
 
 p {
@@ -131,7 +131,11 @@ p {
 }
 
 .section-cream {
-  background-color: var(--cream-dark);
+  background: linear-gradient(180deg, var(--cream-dark), var(--cream));
+}
+
+.section-warm {
+  background: linear-gradient(135deg, #fdf8f0, var(--cream));
 }
 
 /* ---------- Section Header ---------- */
@@ -153,9 +157,9 @@ p {
 }
 
 .section-header p {
-  font-size: 1.15rem;
+  font-size: 1.35rem; /* Larger description text */
   color: var(--charcoal-light);
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
 }
 
@@ -175,11 +179,11 @@ p {
 .btn {
   display: inline-block;
   font-family: var(--font-ui);
-  font-size: 0.85rem;
+  font-size: 1rem; /* Larger buttons */
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  padding: 1rem 2.5rem;
+  padding: 1.15rem 3rem; /* More padding */
   border: none;
   cursor: pointer;
   transition: all var(--transition-smooth);
@@ -236,8 +240,8 @@ p {
 }
 
 .card-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1.25rem;
+  font-size: 3rem; /* Larger icons */
+  margin-bottom: 1.5rem;
   display: block;
 }
 
@@ -246,7 +250,7 @@ p {
 }
 
 .card p {
-  font-size: 1rem;
+  font-size: 1.1rem; /* Slightly larger card text */
   color: var(--charcoal-light);
   margin: 0 auto;
 }
@@ -301,8 +305,12 @@ p {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
+  html {
+    font-size: 16px; /* Scale down on mobile */
+  }
+
   body {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .grid-3 {
@@ -311,5 +319,9 @@ p {
 
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-header p {
+    font-size: 1.15rem;
   }
 }
